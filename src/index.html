@@ -26,17 +26,29 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="hero" style="background-image: url('img/women-fitness.jpg');">
+      <section
+        class="hero"
+        style="background-image: url('img/women-fitness.jpg')"
+      >
         <div class="container">
-          <div class="hero-content">
-            <h1 class="hero-title">Unlock Your Energy Potential</h1>
-            <p class="hero-description">
-              Discover a complete guide to effective exercises and fitness
-              routines
-            </p>
-            <ul class="popular-tags" id="popularTagsList">
-              <!-- Popular exercises will be loaded here -->
-            </ul>
+          <div class="hero-wrapper">
+            <div class="hero-content">
+              <div class="hero-icon">☀️</div>
+              <h1 class="hero-title">
+                Get <span class="hero-highlight">Body</span> in shape, Stay
+                healthy
+              </h1>
+              <p class="hero-description">
+                Transform your physique and embrace a healthier lifestyle with
+                our comprehensive fitness and nutrition support.
+              </p>
+              <ul class="popular-tags" id="popularTagsList">
+                <!-- Popular exercises will be loaded here -->
+              </ul>
+            </div>
+            <div class="hero-side-images" id="heroImages">
+              <!-- Small exercise preview images will be loaded here -->
+            </div>
           </div>
         </div>
       </section>
@@ -59,60 +71,74 @@
         </div>
       </section>
 
-      <!-- Categories Section -->
-      <section class="categories">
+      <!-- Main Content Section (Quote + Categories + Exercises) -->
+      <section class="main-content">
         <div class="container">
-          <h2 class="sr-only">Exercise Categories</h2>
-          <div class="categories-list" id="categoriesList">
-            <!-- Category cards will be loaded here -->
-          </div>
-        </div>
-      </section>
+          <div class="content-wrapper">
+            <!-- Left Side: Quote and Activity Info -->
+            <div class="content-left">
+              <div class="quote-card">
+                <div class="quote-icon">💬</div>
+                <h2 class="quote-title">Quote of the day</h2>
+                <blockquote class="quote-text" id="quoteText">
+                  Loading quote...
+                </blockquote>
+                <p class="quote-author" id="quoteAuthor"></p>
+              </div>
 
-      <!-- Exercises Section -->
-      <section class="exercises">
-        <div class="container">
-          <div class="exercises-header">
-            <h2 class="exercises-title" id="exercisesTitle">Exercises</h2>
-            <form class="search-form" id="searchForm">
-              <input
-                type="text"
-                class="search-input"
-                id="searchInput"
-                placeholder="Search exercise..."
-                aria-label="Search for exercises"
-              />
-              <button type="submit" class="search-btn" aria-label="Search">
-                Search
-              </button>
-            </form>
-          </div>
-          <div class="exercises-list" id="exercisesList">
-            <!-- Exercise cards will be loaded here -->
-          </div>
+              <div class="activity-info">
+                <div class="activity-icon">🏋️</div>
+                <h3 class="activity-title">110 min</h3>
+                <p class="activity-subtitle">Daily norm of sports</p>
+                <p class="activity-description">
+                  The World Health Organization recommends at least 150 minutes
+                  of exercise intensely aerobic activity per week for healthy
+                  living.
+                </p>
+              </div>
+            </div>
 
-          <!-- Pagination -->
-          <div class="pagination" id="pagination">
-            <!-- Pagination buttons will be loaded here -->
-          </div>
-        </div>
-      </section>
+            <!-- Right Side: Categories and Exercises -->
+            <div class="content-right">
+              <!-- Categories Section -->
+              <section class="categories">
+                <h2 class="sr-only">Exercise Categories</h2>
+                <div class="categories-list" id="categoriesList">
+                  <!-- Category cards will be loaded here -->
+                </div>
+              </section>
 
-      <!-- Quote Section -->
-      <section class="quote-section">
-        <div class="container">
-          <h2 class="sr-only">Daily Inspiration</h2>
-          <div class="quote-card">
-            <blockquote class="quote-text" id="quoteText">
-              Loading quote...
-            </blockquote>
-            <p class="quote-author" id="quoteAuthor"></p>
-          </div>
-          <div class="activity-info">
-            <p>
-              Regular exercise is important. 110 minutes of active exercise per
-              week is recommended for healthy living.
-            </p>
+              <!-- Exercises Section -->
+              <section class="exercises">
+                <div class="exercises-header">
+                  <h2 class="exercises-title" id="exercisesTitle">Exercises</h2>
+                  <form class="search-form" id="searchForm">
+                    <input
+                      type="text"
+                      class="search-input"
+                      id="searchInput"
+                      placeholder="Search exercise..."
+                      aria-label="Search for exercises"
+                    />
+                    <button
+                      type="submit"
+                      class="search-btn"
+                      aria-label="Search"
+                    >
+                      🔍
+                    </button>
+                  </form>
+                </div>
+                <div class="exercises-list" id="exercisesList">
+                  <!-- Exercise cards will be loaded here -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination">
+                  <!-- Pagination buttons will be loaded here -->
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </section>
