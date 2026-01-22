@@ -4,6 +4,7 @@
   | default @import url()
   |============================
 */
+@import 'modern-normalize/modern-normalize.css';
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
@@ -12,7 +13,5 @@
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
+@import url('./main.css');
 @import url('./footer.css');

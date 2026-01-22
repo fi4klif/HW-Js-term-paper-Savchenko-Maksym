@@ -1,28 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 2</title>
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Project font: DM Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>Favorites - Your Energy</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load
-      src="./partials/header.html"
-      icon-path="./img/sprite.svg#logo"
-      highlight-act="active"
-    />
+    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
     <main>
-      <div class="container">
-        <h1 class="main-title">
-          <span class="main-title-gradient">Welcome</span> to page 2
-        </h1>
-        <load src="./partials/back-link.html" />
-      </div>
+      <!-- Quote Section -->
+      <section class="quote-section">
+        <div class="container">
+          <div class="quote-card">
+            <blockquote class="quote-text" id="quoteText">
+              Loading quote...
+            </blockquote>
+            <p class="quote-author" id="quoteAuthor"></p>
+          </div>
+          <div class="activity-info">
+            <p>
+              Regular exercise is important. 110 minutes of active exercise per
+              week is recommended for healthy living.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Favorites Section -->
+      <section class="favorites">
+        <div class="container">
+          <h1 class="favorites-title">My Favorites</h1>
+          <div class="favorites-list" id="favoritesList">
+            <!-- Favorite exercises will be loaded here -->
+          </div>
+          <div class="empty-state" id="emptyState" style="display: none">
+            <p class="empty-state-text">
+              You haven't added any exercises to your favorites yet.
+            </p>
+            <a href="./index.html" class="btn-primary">Browse Exercises</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <load src="./partials/footer.html" />
+
+    <!-- Modal Window -->
+    <div class="modal" id="exerciseModal">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="modal-close"
+          id="modalClose"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <div id="modalBody">
+          <!-- Exercise details will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Rating Modal -->
+    <div class="modal" id="ratingModal">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="modal-close"
+          id="ratingModalClose"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <form class="rating-form" id="ratingForm">
+          <h3 class="rating-title">Rate this exercise</h3>
+          <div class="rating-stars" id="ratingStars">
+            <!-- Radio buttons for rating (1-5 stars) -->
+          </div>
+          <div class="form-group">
+            <label for="ratingEmail">Email</label>
+            <input
+              type="email"
+              id="ratingEmail"
+              class="form-input"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-primary">Submit Rating</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
