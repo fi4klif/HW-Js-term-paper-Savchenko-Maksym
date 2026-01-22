@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Project font: DM Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/HW-Js-term-paper-Savchenko-Maksym/favicon.svg" />
+
+    <title>Your Energy - Exercises & Fitness</title>
+    <script type="module" crossorigin src="/HW-Js-term-paper-Savchenko-Maksym/assets/main-DBSlQhNJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/HW-Js-term-paper-Savchenko-Maksym/assets/styles-CheZDFFr.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header-wrapper">
+      <a class="logo" href="./index.html" aria-label="Your Energy Home">
+        <svg class="logo-icon" width="100" height="30">
+          <use href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./page-2.html">Favorites</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Social Links -->
+      <ul class="social-links">
+        <li>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow on Facebook"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow on Instagram"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="img/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Subscribe on YouTube"
+          >
+            <svg class="social-icon" width="24" height="24">
+              <use href="img/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Burger Menu Button -->
+      <button class="burger-btn" id="burgerBtn" aria-label="Toggle menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="./page-2.html">Favorites</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">Unlock Your Energy Potential</h1>
+            <p class="hero-description">
+              Discover a complete guide to effective exercises and fitness
+              routines
+            </p>
+            <ul class="popular-tags" id="popularTagsList">
+              <!-- Popular exercises will be loaded here -->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filters Section -->
+      <section class="filters">
+        <div class="container">
+          <h2 class="filters-title">Filters</h2>
+          <div class="filter-buttons" id="filterButtons">
+            <button class="filter-btn active" data-filter="Muscles">
+              Muscles
+            </button>
+            <button class="filter-btn" data-filter="Body parts">
+              Body parts
+            </button>
+            <button class="filter-btn" data-filter="Equipment">
+              Equipment
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories Section -->
+      <section class="categories">
+        <div class="container">
+          <div class="categories-list" id="categoriesList">
+            <!-- Category cards will be loaded here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Exercises Section -->
+      <section class="exercises">
+        <div class="container">
+          <div class="exercises-header">
+            <h2 class="exercises-title" id="exercisesTitle">Exercises</h2>
+            <form class="search-form" id="searchForm">
+              <input
+                type="text"
+                class="search-input"
+                id="searchInput"
+                placeholder="Search exercise..."
+                aria-label="Search for exercises"
+              />
+              <button type="submit" class="search-btn" aria-label="Search">
+                Search
+              </button>
+            </form>
+          </div>
+          <div class="exercises-list" id="exercisesList">
+            <!-- Exercise cards will be loaded here -->
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination" id="pagination">
+            <!-- Pagination buttons will be loaded here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote Section -->
+      <section class="quote-section">
+        <div class="container">
+          <div class="quote-card">
+            <blockquote class="quote-text" id="quoteText">
+              Loading quote...
+            </blockquote>
+            <p class="quote-author" id="quoteAuthor"></p>
+          </div>
+          <div class="activity-info">
+            <p>
+              Regular exercise is important. 110 minutes of active exercise per
+              week is recommended for healthy living.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <a
+          class="footer-logo"
+          href="./index.html"
+          aria-label="Your Energy Home"
+        >
+          <svg class="footer-logo-icon" width="100" height="30">
+            <use href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-section">
+        <p class="footer-tagline">Achieve Your Fitness Goals</p>
+      </div>
+
+      <div class="footer-section">
+        <ul class="footer-social-links">
+          <li>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow on Facebook"
+            >
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow on Instagram"
+            >
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="img/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Subscribe on YouTube"
+            >
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="img/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-subscribe-title">Subscribe to our newsletter</h3>
+        <form class="subscribe-form" id="subscribeForm">
+          <input
+            type="email"
+            class="subscribe-input"
+            id="subscribeEmail"
+            placeholder="your@email.com"
+            aria-label="Email for subscription"
+            required
+          />
+          <button type="submit" class="btn-primary" aria-label="Subscribe">
+            Subscribe
+          </button>
+        </form>
+        <div id="subscribeMessage"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-desc">&copy; 2025 Your Energy. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Modal Window -->
+    <div class="modal" id="exerciseModal">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="modal-close"
+          id="modalClose"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <div id="modalBody">
+          <!-- Exercise details will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Rating Modal -->
+    <div class="modal" id="ratingModal">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="modal-close"
+          id="ratingModalClose"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <form class="rating-form" id="ratingForm">
+          <h3 class="rating-title">Rate this exercise</h3>
+          <div class="rating-stars" id="ratingStars">
+            <!-- Radio buttons for rating (1-5 stars) -->
+          </div>
+          <div class="form-group">
+            <label for="ratingEmail">Email</label>
+            <input
+              type="email"
+              id="ratingEmail"
+              class="form-input"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-primary">Submit Rating</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
