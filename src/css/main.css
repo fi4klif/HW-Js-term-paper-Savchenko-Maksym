@@ -87,6 +87,7 @@
   background-color: #667eea;
   color: white;
   border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
 }
 
 /* ===== Categories Section ===== */
@@ -299,6 +300,7 @@
   background-color: #667eea;
   color: white;
   border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
 }
 
 /* ===== Quote Section ===== */
