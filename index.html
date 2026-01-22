@@ -20,7 +20,7 @@
 
     <title>Your Energy - Exercises & Fitness</title>
     <script type="module" crossorigin src="/HW-Js-term-paper-Savchenko-Maksym/assets/main-DBSlQhNJ.js"></script>
-    <link rel="stylesheet" crossorigin href="/HW-Js-term-paper-Savchenko-Maksym/assets/styles-D9M6Vcfw.css">
+    <link rel="stylesheet" crossorigin href="/HW-Js-term-paper-Savchenko-Maksym/assets/styles-BOtNk4WM.css">
   </head>
   <body>
     <header class="header">
@@ -111,17 +111,29 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="hero" style="background-image: url('/HW-Js-term-paper-Savchenko-Maksym/assets/women-fitness-Dz8P5uDH.jpg');">
+      <section
+        class="hero"
+        style="background-image: url('/HW-Js-term-paper-Savchenko-Maksym/assets/women-fitness-Dz8P5uDH.jpg')"
+      >
         <div class="container">
-          <div class="hero-content">
-            <h1 class="hero-title">Unlock Your Energy Potential</h1>
-            <p class="hero-description">
-              Discover a complete guide to effective exercises and fitness
-              routines
-            </p>
-            <ul class="popular-tags" id="popularTagsList">
-              <!-- Popular exercises will be loaded here -->
-            </ul>
+          <div class="hero-wrapper">
+            <div class="hero-content">
+              <div class="hero-icon">☀️</div>
+              <h1 class="hero-title">
+                Get <span class="hero-highlight">Body</span> in shape, Stay
+                healthy
+              </h1>
+              <p class="hero-description">
+                Transform your physique and embrace a healthier lifestyle with
+                our comprehensive fitness and nutrition support.
+              </p>
+              <ul class="popular-tags" id="popularTagsList">
+                <!-- Popular exercises will be loaded here -->
+              </ul>
+            </div>
+            <div class="hero-side-images" id="heroImages">
+              <!-- Small exercise preview images will be loaded here -->
+            </div>
           </div>
         </div>
       </section>
@@ -144,60 +156,74 @@
         </div>
       </section>
 
-      <!-- Categories Section -->
-      <section class="categories">
+      <!-- Main Content Section (Quote + Categories + Exercises) -->
+      <section class="main-content">
         <div class="container">
-          <h2 class="sr-only">Exercise Categories</h2>
-          <div class="categories-list" id="categoriesList">
-            <!-- Category cards will be loaded here -->
-          </div>
-        </div>
-      </section>
+          <div class="content-wrapper">
+            <!-- Left Side: Quote and Activity Info -->
+            <div class="content-left">
+              <div class="quote-card">
+                <div class="quote-icon">💬</div>
+                <h2 class="quote-title">Quote of the day</h2>
+                <blockquote class="quote-text" id="quoteText">
+                  Loading quote...
+                </blockquote>
+                <p class="quote-author" id="quoteAuthor"></p>
+              </div>
 
-      <!-- Exercises Section -->
-      <section class="exercises">
-        <div class="container">
-          <div class="exercises-header">
-            <h2 class="exercises-title" id="exercisesTitle">Exercises</h2>
-            <form class="search-form" id="searchForm">
-              <input
-                type="text"
-                class="search-input"
-                id="searchInput"
-                placeholder="Search exercise..."
-                aria-label="Search for exercises"
-              />
-              <button type="submit" class="search-btn" aria-label="Search">
-                Search
-              </button>
-            </form>
-          </div>
-          <div class="exercises-list" id="exercisesList">
-            <!-- Exercise cards will be loaded here -->
-          </div>
+              <div class="activity-info">
+                <div class="activity-icon">🏋️</div>
+                <h3 class="activity-title">110 min</h3>
+                <p class="activity-subtitle">Daily norm of sports</p>
+                <p class="activity-description">
+                  The World Health Organization recommends at least 150 minutes
+                  of exercise intensely aerobic activity per week for healthy
+                  living.
+                </p>
+              </div>
+            </div>
 
-          <!-- Pagination -->
-          <div class="pagination" id="pagination">
-            <!-- Pagination buttons will be loaded here -->
-          </div>
-        </div>
-      </section>
+            <!-- Right Side: Categories and Exercises -->
+            <div class="content-right">
+              <!-- Categories Section -->
+              <section class="categories">
+                <h2 class="sr-only">Exercise Categories</h2>
+                <div class="categories-list" id="categoriesList">
+                  <!-- Category cards will be loaded here -->
+                </div>
+              </section>
 
-      <!-- Quote Section -->
-      <section class="quote-section">
-        <div class="container">
-          <h2 class="sr-only">Daily Inspiration</h2>
-          <div class="quote-card">
-            <blockquote class="quote-text" id="quoteText">
-              Loading quote...
-            </blockquote>
-            <p class="quote-author" id="quoteAuthor"></p>
-          </div>
-          <div class="activity-info">
-            <p>
-              Regular exercise is important. 110 minutes of active exercise per
-              week is recommended for healthy living.
-            </p>
+              <!-- Exercises Section -->
+              <section class="exercises">
+                <div class="exercises-header">
+                  <h2 class="exercises-title" id="exercisesTitle">Exercises</h2>
+                  <form class="search-form" id="searchForm">
+                    <input
+                      type="text"
+                      class="search-input"
+                      id="searchInput"
+                      placeholder="Search exercise..."
+                      aria-label="Search for exercises"
+                    />
+                    <button
+                      type="submit"
+                      class="search-btn"
+                      aria-label="Search"
+                    >
+                      🔍
+                    </button>
+                  </form>
+                </div>
+                <div class="exercises-list" id="exercisesList">
+                  <!-- Exercise cards will be loaded here -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination">
+                  <!-- Pagination buttons will be loaded here -->
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </section>
@@ -212,7 +238,13 @@
           href="./index.html"
           aria-label="Your Energy Home"
         >
-          <img src="data:image/svg+xml,%3csvg%20width='132'%20height='24'%20viewBox='0%200%20132%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.98%2013.28L0%205H2.98L6.32%2010.74H6.36L9.7%205H12.68L7.7%2013.28V19H4.98V13.28Z'%20fill='%23242424'/%3e%3cpath%20d='M12.6703%2016.7V7.3L14.9703%205H22.1703L24.4703%207.3V16.7L22.1703%2019H14.9703L12.6703%2016.7ZM20.7303%2016.68L21.7503%2015.66V8.34L20.7303%207.32H16.4103L15.3903%208.34V15.66L16.4103%2016.68H20.7303Z'%20fill='%23242424'/%3e%3cpath%20d='M26.3742%2016.6V5H29.0942V15.66L30.1142%2016.68H34.0342L35.0542%2015.66V5H37.7742V16.6L35.3742%2019H28.7742L26.3742%2016.6Z'%20fill='%23242424'/%3e%3cpath%20d='M50.8781%2014.36V19H48.1581V14.98L46.9581%2013.64H42.5981V19H39.8781V5H48.6581L50.7981%207.16V11.4L49.4381%2012.78L50.8781%2014.36ZM42.5981%2011.4H47.4181L48.1181%2010.7V7.98L47.4181%207.28H42.5981V11.4Z'%20fill='%23242424'/%3e%3cpath%20d='M57.8234%205H67.9434V7.3H60.5434V10.84H67.3634V13.1H60.5434V16.7H67.9434V19H57.8234V5Z'%20fill='%23242424'/%3e%3cpath%20d='M69.4523%205H71.8923L78.1323%2014.5H78.1723V5H80.7923V19H78.3523L72.1123%209.52H72.0723V19H69.4523V5Z'%20fill='%23242424'/%3e%3cpath%20d='M82.8977%205H93.0177V7.3H85.6177V10.84H92.4377V13.1H85.6177V16.7H93.0177V19H82.8977V5Z'%20fill='%23242424'/%3e%3cpath%20d='M105.527%2014.36V19H102.807V14.98L101.607%2013.64H97.2466V19H94.5266V5H103.307L105.447%207.16V11.4L104.087%2012.78L105.527%2014.36ZM97.2466%2011.4H102.067L102.767%2010.7V7.98L102.067%207.28H97.2466V11.4Z'%20fill='%23242424'/%3e%3cpath%20d='M107.323%2016.7V7.3L109.623%205H116.583L118.843%207.26V9.4H116.123V8.26L115.183%207.32H111.063L110.043%208.34V15.66L111.063%2016.68H115.223L116.203%2015.7V13.52H113.203V11.2H118.843V16.7L116.543%2019H109.623L107.323%2016.7Z'%20fill='%23242424'/%3e%3cpath%20d='M123.828%2013.28L118.848%205H121.828L125.168%2010.74H125.208L128.548%205H131.528L126.548%2013.28V19H123.828V13.28Z'%20fill='%23242424'/%3e%3c/svg%3e" alt="Your Energy Logo" class="footer-logo-icon" width="100" height="30" />
+          <img
+            src="data:image/svg+xml,%3csvg%20width='132'%20height='24'%20viewBox='0%200%20132%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.98%2013.28L0%205H2.98L6.32%2010.74H6.36L9.7%205H12.68L7.7%2013.28V19H4.98V13.28Z'%20fill='%23242424'/%3e%3cpath%20d='M12.6703%2016.7V7.3L14.9703%205H22.1703L24.4703%207.3V16.7L22.1703%2019H14.9703L12.6703%2016.7ZM20.7303%2016.68L21.7503%2015.66V8.34L20.7303%207.32H16.4103L15.3903%208.34V15.66L16.4103%2016.68H20.7303Z'%20fill='%23242424'/%3e%3cpath%20d='M26.3742%2016.6V5H29.0942V15.66L30.1142%2016.68H34.0342L35.0542%2015.66V5H37.7742V16.6L35.3742%2019H28.7742L26.3742%2016.6Z'%20fill='%23242424'/%3e%3cpath%20d='M50.8781%2014.36V19H48.1581V14.98L46.9581%2013.64H42.5981V19H39.8781V5H48.6581L50.7981%207.16V11.4L49.4381%2012.78L50.8781%2014.36ZM42.5981%2011.4H47.4181L48.1181%2010.7V7.98L47.4181%207.28H42.5981V11.4Z'%20fill='%23242424'/%3e%3cpath%20d='M57.8234%205H67.9434V7.3H60.5434V10.84H67.3634V13.1H60.5434V16.7H67.9434V19H57.8234V5Z'%20fill='%23242424'/%3e%3cpath%20d='M69.4523%205H71.8923L78.1323%2014.5H78.1723V5H80.7923V19H78.3523L72.1123%209.52H72.0723V19H69.4523V5Z'%20fill='%23242424'/%3e%3cpath%20d='M82.8977%205H93.0177V7.3H85.6177V10.84H92.4377V13.1H85.6177V16.7H93.0177V19H82.8977V5Z'%20fill='%23242424'/%3e%3cpath%20d='M105.527%2014.36V19H102.807V14.98L101.607%2013.64H97.2466V19H94.5266V5H103.307L105.447%207.16V11.4L104.087%2012.78L105.527%2014.36ZM97.2466%2011.4H102.067L102.767%2010.7V7.98L102.067%207.28H97.2466V11.4Z'%20fill='%23242424'/%3e%3cpath%20d='M107.323%2016.7V7.3L109.623%205H116.583L118.843%207.26V9.4H116.123V8.26L115.183%207.32H111.063L110.043%208.34V15.66L111.063%2016.68H115.223L116.203%2015.7V13.52H113.203V11.2H118.843V16.7L116.543%2019H109.623L107.323%2016.7Z'%20fill='%23242424'/%3e%3cpath%20d='M123.828%2013.28L118.848%205H121.828L125.168%2010.74H125.208L128.548%205H131.528L126.548%2013.28V19H123.828V13.28Z'%20fill='%23242424'/%3e%3c/svg%3e"
+            alt="Your Energy Logo"
+            class="footer-logo-icon"
+            width="100"
+            height="30"
+          />
         </a>
       </div>
 
