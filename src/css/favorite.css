@@ -155,7 +155,6 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  /* Fix Mobile: height auto to show full image */
   height: auto; 
   border-radius: 20px;
   overflow: hidden;
@@ -165,7 +164,6 @@
 
 .fav-img-cover {
   width: 100%;
-  /* Fix Mobile: height auto to maintain aspect ratio */
   height: auto;
   object-fit: cover;
   display: block;
@@ -267,7 +265,7 @@
     background-image: url('../img/main/fav-tablet.png');
     max-width: none;
     height: 141px;
-    object-fit: center;
+    object-fit: cover;
     object-position: center;
     background-position: 50% 30%; 
   }
@@ -334,7 +332,6 @@
     margin: 180px auto 0;
   }
   
-  /* Hides pagination only inside right column on Desktop */
   .fav-right-col .pagination {
     display: none;
   }

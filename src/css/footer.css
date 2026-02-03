@@ -289,13 +289,13 @@
 
   .bottom-section-left{
     grid-column: 1;
-    grid-row: 0;
+    grid-row: 1;
     width: auto;
   }
 
   .bottom-section-middle{
     grid-column: 2;
-    grid-row: 0;
+    grid-row: 1;
   }
 
   .bottom-section-right{
