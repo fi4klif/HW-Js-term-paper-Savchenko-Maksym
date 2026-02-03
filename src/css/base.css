@@ -51,7 +51,6 @@ main {
   flex-grow: 1;
 }
 
-/* Screen Reader Only - для доступності */
 .sr-only {
   position: absolute;
   width: 1px;

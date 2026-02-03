@@ -3,141 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Project font: DM Sans (optimized) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Preconnect to API -->
-    <link rel="preconnect" href="https://your-energy.b.goit.study" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
     <title>Your Energy - Exercises & Fitness</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/logo.svg" />
-
+    <load src="./partials/header.html" icon-path="img/icons/sun.svg" />
+    
     <main>
-      <!-- Hero Section -->
-      <section
-        class="hero"
-        style="background-image: url('img/women-fitness.jpg')"
-      >
+      <section class="hero">
         <div class="container">
           <div class="hero-wrapper">
             <div class="hero-content">
-              <div class="hero-icon">☀️</div>
-              <h1 class="hero-title">
-                Get <span class="hero-highlight">Body</span> in shape, Stay
-                healthy
-              </h1>
+              <div class="hero-title">
+                <h1 class="hero-heading">
+                  Get <span class="hero-highlight">Body</span> in shape, Stay
+                  <span class="hero-highlight">Healthy</span>
+                  <img src="img/icons/sun.svg" alt="" class="hero-icon" aria-hidden="true"/>
+                </h1>
+              </div>
               <p class="hero-description">
                 Transform your physique and embrace a healthier lifestyle with
                 our comprehensive fitness and nutrition support.
               </p>
-              <ul class="popular-tags" id="popularTagsList">
-                <!-- Popular exercises will be loaded here -->
-              </ul>
             </div>
-            <div class="hero-side-images" id="heroImages">
-              <!-- Small exercise preview images will be loaded here -->
+            <div class="hero-right-side">
+              <div class="hero-side-images" id="heroImages">
+                <img src="img/main/foot.png" alt="Healthy lifestyle exercise" />
+              </div>
+              <div class="tags-conteiner" id="tagsContainer">
+                <span class="tag">#Sport</span>
+                <span class="tag">#Healthy</span>
+                <span class="tag">#Workout</span>
+                <span class="tag">#Diet</span>
+              </div>
             </div>
           </div>
+          <img class="hero-image" src="img/main/women-fitness.jpg" alt="Fitness girl" loading="eager" />
         </div>
       </section>
 
-      <!-- Filters Section -->
-      <section class="filters">
+      <div class="exercises-section">
         <div class="container">
-          <h2 class="filters-title">Filters</h2>
-          <div class="filter-buttons" id="filterButtons">
-            <button class="filter-btn active" data-filter="Muscles">
-              Muscles
-            </button>
-            <button class="filter-btn" data-filter="Body parts">
-              Body parts
-            </button>
-            <button class="filter-btn" data-filter="Equipment">
-              Equipment
-            </button>
+          <div class="exercises-header-wrapper">
+            <h2 class="filters-title">
+              Exercises
+              <span class="exercises-category" id="exercisesCategory"></span>
+            </h2>
+            <div class="filter-buttons" id="filterButtons">
+              <form class="search-box" id="searchForm">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search" autocomplete="off" />
+                <button type="submit" class="search-btn" aria-label="Search">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.9997 11.9997L16.9997 16.9997M13.9997 7.99967C13.9997 11.3134 11.3134 13.9997 7.99967 13.9997C4.68597 13.9997 1.99967 11.3134 1.99967 7.99967C1.99967 4.68597 4.68597 1.99967 7.99967 1.99967C11.3134 1.99967 13.9997 4.68597 13.9997 7.99967Z" stroke="#242424" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </form>
+              <button class="filter-btn active" data-filter="Muscles">Muscles</button>
+              <button class="filter-btn" data-filter="Body parts" id="bodyPartsBtn">Body parts</button>
+              <button class="filter-btn" data-filter="Equipment">Equipment</button>
+            </div>
           </div>
         </div>
-      </section>
+      </div> 
 
-      <!-- Main Content Section (Quote + Categories + Exercises) -->
       <section class="main-content">
         <div class="container">
           <div class="content-wrapper">
-            <!-- Left Side: Quote and Activity Info -->
             <div class="content-left">
               <div class="quote-card">
-                <div class="quote-icon">💬</div>
-                <h2 class="quote-title">Quote of the day</h2>
-                <blockquote class="quote-text" id="quoteText">
-                  Loading quote...
-                </blockquote>
+                <h2 class="quote-title">
+                  <img src="img/icons/men-run.svg" alt="" class="quote-icon" aria-hidden="true" />
+                  Quote of the day
+                  <img src="img/icons/inverted-commas.svg" alt="" class="quote-commas-icon" aria-hidden="true" />
+                </h2>
+                <blockquote class="quote-text" id="quoteText">Loading...</blockquote>
                 <p class="quote-author" id="quoteAuthor"></p>
               </div>
-
+              <div><img class="quote-image" src="img/main/quote.png" alt="Quote image" /></div>
               <div class="activity-info">
-                <div class="activity-icon">🏋️</div>
-                <h3 class="activity-title">110 min</h3>
+                <h3 class="activity-title">
+                  <div class="activity-icon"><img src="img/favicon.svg" alt="" aria-hidden="true" /></div>
+                  110 min
+                </h3>
                 <p class="activity-subtitle">Daily norm of sports</p>
                 <p class="activity-description">
-                  The World Health Organization recommends at least 150 minutes
-                  of exercise intensely aerobic activity per week for healthy
-                  living.
+                  The World Health Organization recommends at least 150 minutes of moderate-intensity aerobic physical activity throughout the week for adults aged 18-64. However, what happens if we adjust that number to 110 minutes every day? While it might seem like a high number to hit, dedicating 110 minutes daily to sporting activities may offer unparalleled benefits to physical health, mental well-being, and overall quality of life.
                 </p>
               </div>
             </div>
-
-            <!-- Right Side: Categories and Exercises -->
             <div class="content-right">
-              <!-- Categories Section -->
-              <section class="categories">
-                <h2 class="sr-only">Exercise Categories</h2>
-                <div class="categories-list" id="categoriesList">
-                  <!-- Category cards will be loaded here -->
-                </div>
-              </section>
-
-              <!-- Exercises Section -->
-              <section class="exercises">
-                <div class="exercises-header">
-                  <h2 class="exercises-title" id="exercisesTitle">Exercises</h2>
-                  <form class="search-form" id="searchForm">
-                    <input
-                      type="text"
-                      class="search-input"
-                      id="searchInput"
-                      placeholder="Search exercise..."
-                      aria-label="Search for exercises"
-                    />
-                    <button
-                      type="submit"
-                      class="search-btn"
-                      aria-label="Search"
-                    >
-                      🔍
-                    </button>
-                  </form>
-                </div>
-                <div class="exercises-list" id="exercisesList">
-                  <!-- Exercise cards will be loaded here -->
-                </div>
-
-                <!-- Pagination -->
-                <div class="pagination" id="pagination">
-                  <!-- Pagination buttons will be loaded here -->
-                </div>
-              </section>
+              <section class="categories"><ul class="categories-list" id="categoriesList"></ul></section>
+              <div class="exercises-list" id="exercisesList"></div>
+              <div class="pagination" id="pagination"></div>
             </div>
           </div>
         </div>
@@ -146,50 +107,59 @@
 
     <load src="./partials/footer.html" />
 
-    <!-- Modal Window -->
     <div class="modal" id="exerciseModal">
       <div class="modal-content">
-        <button
-          type="button"
-          class="modal-close"
-          id="modalClose"
-          aria-label="Close modal"
-        >
-          &times;
+        <button type="button" class="modal-close" id="modalClose">
+          <svg width="24" height="24" stroke="#F4F4F4"><use href="./img/menu/x.svg"></use></svg>
         </button>
-        <div id="modalBody">
-          <!-- Exercise details will be loaded here -->
-        </div>
+        <div id="modalBody"></div>
       </div>
     </div>
 
-    <!-- Rating Modal -->
     <div class="modal" id="ratingModal">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="modal-close"
-          id="ratingModalClose"
-          aria-label="Close modal"
-        >
-          &times;
+      <div class="modal-content rating-modal-content">
+        <button type="button" class="modal-close" id="ratingModalClose">
+          <svg width="24" height="24" stroke="#F4F4F4"><use href="./img/menu/x.svg"></use></svg>
         </button>
         <form class="rating-form" id="ratingForm">
-          <h3 class="rating-title">Rate this exercise</h3>
-          <div class="rating-stars" id="ratingStars">
-            <!-- Radio buttons for rating (1-5 stars) -->
+          <p class="rating-label">Rating</p>
+          <div class="rating-stars-container">
+            <span class="rating-value" id="ratingValueDisplay">0.0</span>
+            <div class="rating-stars" id="ratingStars">
+              <input type="radio" name="rate" value="1" id="star1" class="rating-input visually-hidden">
+              <label for="star1" class="rating-star-label">
+                <svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg>
+              </label>
+              <input type="radio" name="rate" value="2" id="star2" class="rating-input visually-hidden">
+              <label for="star2" class="rating-star-label">
+                <svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg>
+              </label>
+              <input type="radio" name="rate" value="3" id="star3" class="rating-input visually-hidden">
+              <label for="star3" class="rating-star-label">
+                <svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg>
+              </label>
+              <input type="radio" name="rate" value="4" id="star4" class="rating-input visually-hidden">
+              <label for="star4" class="rating-star-label">
+                <svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg>
+              </label>
+              <input type="radio" name="rate" value="5" id="star5" class="rating-input visually-hidden">
+              <label for="star5" class="rating-star-label">
+                <svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg>
+              </label>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="ratingEmail">Email</label>
-            <input
-              type="email"
-              id="ratingEmail"
-              class="form-input"
-              placeholder="your@email.com"
-              required
-            />
+          <div class="rating-inputs-wrapper">
+            <input 
+              type="email" 
+              name="email" 
+              class="rating-field" 
+              placeholder="Email" 
+              required 
+              pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+            >
+            <textarea name="review" class="rating-field rating-comment" placeholder="Your comment" required></textarea>
           </div>
-          <button type="submit" class="btn-primary">Submit Rating</button>
+          <button type="submit" class="btn-primary rating-submit-btn">Send</button>
         </form>
       </div>
     </div>

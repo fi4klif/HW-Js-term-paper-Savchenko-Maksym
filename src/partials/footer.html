@@ -1,88 +1,68 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div class="footer-section">
-        <a
-          class="footer-logo"
-          href="./index.html"
-          aria-label="Your Energy Home"
-        >
-          <img
-            src="img/logo.svg"
-            alt="Your Energy Logo"
-            class="footer-logo-icon"
-            width="100"
-            height="30"
-          />
-        </a>
-      </div>
-
-      <div class="footer-section">
-        <p class="footer-tagline">Achieve Your Fitness Goals</p>
-      </div>
-
-      <div class="footer-section">
+      <div class="footer-section-left">
+        <h2 class="footer-logo">
+          <a href="./index.html" class="footer-logo" aria-label="Go to Homepage">
+            <img src="img/logo-white.svg" alt="Logo" />
+          </a>
+        </h2>
         <ul class="footer-social-links">
           <li>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow on Facebook"
-            >
-              <svg class="footer-social-icon" width="24" height="24">
-                <use href="img/sprite.svg#facebook"></use>
-              </svg>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <img src="img/icons/social/facebook-black-normal.svg" alt="Facebook" class="social-icon-normal" />
+              <img src="img/icons/social/facebook-black-hover.svg" alt="Facebook Hover" class="social-icon-hover" />
             </a>
           </li>
           <li>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow on Instagram"
-            >
-              <svg class="footer-social-icon" width="24" height="24">
-                <use href="img/sprite.svg#instagram"></use>
-              </svg>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="img/icons/social/instagram-black-normal.svg" alt="Instagram" class="social-icon-normal" />
+              <img src="img/icons/social/instagram-black-hover.svg" alt="Instagram Hover" class="social-icon-hover" />
             </a>
           </li>
           <li>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Subscribe on YouTube"
-            >
-              <svg class="footer-social-icon" width="24" height="24">
-                <use href="img/sprite.svg#youtube"></use>
-              </svg>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+              <img src="img/icons/social/youtube-black-normal.svg" alt="Youtube" class="social-icon-normal" />
+              <img src="img/icons/social/youtube-black-hover.svg" alt="Youtube Hover" class="social-icon-hover" />
             </a>
           </li>
         </ul>
       </div>
 
-      <div class="footer-section">
-        <h3 class="footer-subscribe-title">Subscribe to our newsletter</h3>
+      <div class="footer-section-middle">
+        <p class="footer-tagline">
+          Transforming your <span class="footer-italic">body</span> shape with us
+        </p>
+      </div>
+
+      <div class="footer-section-right">
+        <h3 class="footer-subscribe-title">
+          Subscribe and learn about new exercises!
+        </h3>
         <form class="subscribe-form" id="subscribeForm">
-          <input
-            type="email"
-            class="subscribe-input"
-            id="subscribeEmail"
-            placeholder="your@email.com"
-            aria-label="Email for subscription"
-            required
-          />
-          <button type="submit" class="btn-primary" aria-label="Subscribe">
-            Subscribe
-          </button>
+          <input type="email" class="subscribe-input" id="subscribeEmail" placeholder="Email" aria-label="Email for subscription" required />
+          <button type="submit" class="btn-primary" aria-label="Send">Send</button>
         </form>
         <div id="subscribeMessage"></div>
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <p class="footer-desc">&copy; 2025 Your Energy. All rights reserved.</p>
+    <div class="footer-section-bottom">
+      <div class="footer-wrapper">
+        <div class="bottom-section-left">
+          <p class="footer-copyright">Your Energy. All rights reserved.</p>
+        </div>
+        <div class="bottom-section-middle">
+          <div class="footer-links-wrapper">
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <span class="footer-separator">/</span>
+            <a href="#" class="footer-link">Terms of Service</a>
+          </div>
+        </div>
+        <div class="bottom-section-right">
+          <p class="footer-year">©2023</p>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

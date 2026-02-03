@@ -1,73 +1,54 @@
 <header class="header">
   <div class="container">
     <div class="header-wrapper">
-      <a class="logo" href="./index.html" aria-label="Your Energy Home">
-        <svg class="logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+      
+      <a href="./index.html" class="logo" aria-label="Go to Homepage">
+        <img src="img/logo-black.svg" alt="YOUR ENERGY" class="logo-icon" />
       </a>
 
-      <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">Home</a>
-          </li>
-          <li class="nav-item">
+        <div class="nav-container">
+          <div class="nav-wrapper">
+            <a class="nav-link nav-link-active" href="./index.html">Home</a>
             <a class="nav-link" href="./page-2.html">Favorites</a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
 
-      <!-- Social Links -->
       <ul class="social-links">
         <li>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Follow on Facebook"
-          >
-            <svg class="social-icon" width="24" height="24">
-              <use href="img/sprite.svg#facebook"></use>
-            </svg>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="img/icons/social/facebook-normal.svg" alt="Facebook" class="social-icon-normal" />
+            <img src="img/icons/social/facebook-hover.svg" alt="Facebook Hover" class="social-icon-hover" />
           </a>
         </li>
         <li>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Follow on Instagram"
-          >
-            <svg class="social-icon" width="24" height="24">
-              <use href="img/sprite.svg#instagram"></use>
-            </svg>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="img/icons/social/instagram-normal.svg" alt="Instagram" class="social-icon-normal" />
+            <img src="img/icons/social/instagram-hover.svg" alt="Instagram Hover" class="social-icon-hover" />
           </a>
         </li>
         <li>
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Subscribe on YouTube"
-          >
-            <svg class="social-icon" width="24" height="24">
-              <use href="img/sprite.svg#youtube"></use>
-            </svg>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+            <img src="img/icons/social/youtube-normal.svg" alt="Youtube" class="social-icon-normal" />
+            <img src="img/icons/social/youtube-hover.svg" alt="Youtube Hover" class="social-icon-hover" />
           </a>
         </li>
       </ul>
 
-      <!-- Mobile Burger Menu Button -->
       <button class="burger-btn" id="burgerBtn" aria-label="Toggle menu">
         <span class="burger-line"></span>
         <span class="burger-line"></span>
         <span class="burger-line"></span>
       </button>
 
-      <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close-btn" id="mobileMenuCloseBtn" aria-label="Close menu">
+          <svg width="32" height="32" stroke="#F4F4F4">
+            <use href="img/menu/x.svg"></use>
+          </svg>
+        </button>
+
         <nav class="mobile-nav">
           <ul class="mobile-nav-list">
             <li class="mobile-nav-item">
@@ -78,7 +59,29 @@
             </li>
           </ul>
         </nav>
+
+        <ul class="mobile-socials">
+          <li>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <img src="/img/icons/social/facebook-black-normal.svg" alt="Facebook" class="mob-soc-normal"/>
+              <img src="img/icons/social/facebook-black-hover.svg" alt="Facebook Hover" class="mob-soc-hover"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="img/icons/social/instagram-black-normal.svg" alt="Instagram" class="mob-soc-normal"/>
+              <img src="img/icons/social/instagram-black-hover.svg" alt="Instagram Hover" class="mob-soc-hover" />
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+              <img src="img/icons/social/youtube-black-normal.svg" alt="Youtube" class="mob-soc-normal"/>
+              <img src="img/icons/social/youtube-black-hover.svg" alt="Youtube Hover" class="mob-soc-hover" />
+            </a>
+          </li>
+        </ul>
       </div>
+
     </div>
   </div>
 </header>

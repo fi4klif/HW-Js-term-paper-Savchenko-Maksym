@@ -3,110 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Project font: DM Sans (optimized) -->
+    <title>Your Energy - Favorites</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Preconnect to API -->
-    <link rel="preconnect" href="https://your-energy.b.goit.study" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <title>Favorites - Your Energy</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/logo.svg" />
+    <load src="./partials/header.html" />
 
     <main>
-      <!-- Quote Section -->
-      <section class="quote-section">
+      <section class="fav-section">
         <div class="container">
-          <h2 class="sr-only">Daily Inspiration</h2>
-          <div class="quote-card">
-            <blockquote class="quote-text" id="quoteText">
-              Loading quote...
-            </blockquote>
-            <p class="quote-author" id="quoteAuthor"></p>
-          </div>
-          <div class="activity-info">
-            <p>
-              Regular exercise is important. 110 minutes of active exercise per
-              week is recommended for healthy living.
-            </p>
-          </div>
-        </div>
-      </section>
+          
+          <h2 class="fav-section-title">Favorites</h2>
+          
+          <div class="fav-wrapper">
+            <div class="fav-left-col">
+              
+              <div class="fav-quote-card">
+                <div class="fav-quote-header">
+                  <div class="fav-icon-wrap">
+                      <img src="img/icons/men-run.svg" alt="" aria-hidden="true" />
+                  </div>
+                  <h3 class="fav-quote-label">Quote of the day</h3>
+                  <div class="fav-commas-wrap">
+                      <img src="img/icons/inverted-commas.svg" alt="" aria-hidden="true" />
+                  </div>
+                </div>
+                
+                <blockquote class="fav-quote-text" id="quoteText">Loading...</blockquote>
+                <p class="fav-quote-author" id="quoteAuthor"></p>
+              </div>
 
-      <!-- Favorites Section -->
-      <section class="favorites">
-        <div class="container">
-          <h1 class="favorites-title">My Favorites</h1>
-          <div class="favorites-list" id="favoritesList">
-            <!-- Favorite exercises will be loaded here -->
-          </div>
-          <div class="empty-state" id="emptyState" style="display: none">
-            <p class="empty-state-text">
-              You haven't added any exercises to your favorites yet.
-            </p>
-            <a href="./index.html" class="btn-primary">Browse Exercises</a>
+              <div class="fav-bottom-row">
+                <div class="fav-info-card">
+                  <div class="fav-info-top">
+                      <div class="fav-info-icon">
+                         <img src="img/icons/fluent-food.svg" alt="" aria-hidden="true" />
+                      </div>
+                      <h3 class="fav-info-title">110 min</h3>
+                  </div>
+                  <p class="fav-info-subtitle">Daily norm of sports</p>
+                </div>
+
+                <div class="fav-image-card">
+                  <img src="img/main/fav-tablet.png" alt="Workout outdoors" class="fav-img-cover" />
+                </div>
+              </div>
+            </div>
+
+            <div class="fav-right-col">
+              <div class="favorites-list" id="favoritesList"></div>
+              
+              <div class="favorites-empty" id="favoritesEmpty" style="display: none;">
+                <p class="favorites-empty-text">
+                  It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.
+                </p>
+              </div>
+
+              <div class="pagination" id="pagination"></div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <load src="./partials/footer.html" />
-
-    <!-- Modal Window -->
     <div class="modal" id="exerciseModal">
       <div class="modal-content">
-        <button
-          type="button"
-          class="modal-close"
-          id="modalClose"
-          aria-label="Close modal"
-        >
-          &times;
+        <button type="button" class="modal-close" id="modalClose">
+          <svg width="24" height="24" stroke="#F4F4F4"><use href="./img/menu/x.svg"></use></svg>
         </button>
-        <div id="modalBody">
-          <!-- Exercise details will be loaded here -->
-        </div>
+        <div id="modalBody"></div>
       </div>
     </div>
 
-    <!-- Rating Modal -->
     <div class="modal" id="ratingModal">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="modal-close"
-          id="ratingModalClose"
-          aria-label="Close modal"
-        >
-          &times;
+      <div class="modal-content rating-modal-content">
+        <button type="button" class="modal-close" id="ratingModalClose">
+          <svg width="24" height="24" stroke="#F4F4F4"><use href="./img/menu/x.svg"></use></svg>
         </button>
         <form class="rating-form" id="ratingForm">
-          <h3 class="rating-title">Rate this exercise</h3>
-          <div class="rating-stars" id="ratingStars">
-            <!-- Radio buttons for rating (1-5 stars) -->
+          <p class="rating-label">Rating</p>
+          <div class="rating-stars-container">
+            <span class="rating-value" id="ratingValueDisplay">0.0</span>
+            <div class="rating-stars" id="ratingStars">
+              <input type="radio" name="rate" value="1" id="star1" class="rating-input visually-hidden"><label for="star1" class="rating-star-label"><svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg></label>
+              <input type="radio" name="rate" value="2" id="star2" class="rating-input visually-hidden"><label for="star2" class="rating-star-label"><svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg></label>
+              <input type="radio" name="rate" value="3" id="star3" class="rating-input visually-hidden"><label for="star3" class="rating-star-label"><svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg></label>
+              <input type="radio" name="rate" value="4" id="star4" class="rating-input visually-hidden"><label for="star4" class="rating-star-label"><svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg></label>
+              <input type="radio" name="rate" value="5" id="star5" class="rating-input visually-hidden"><label for="star5" class="rating-star-label"><svg width="24" height="24"><use href="./img/icons/zero-star.svg"></use></svg></label>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="ratingEmail">Email</label>
-            <input
-              type="email"
-              id="ratingEmail"
-              class="form-input"
-              placeholder="your@email.com"
-              required
-            />
+          <div class="rating-inputs-wrapper">
+            <input type="email" name="email" class="rating-field" placeholder="Email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+            <textarea name="review" class="rating-field rating-comment" placeholder="Your comment" required></textarea>
           </div>
-          <button type="submit" class="btn-primary">Submit Rating</button>
+          <button type="submit" class="btn-primary rating-submit-btn">Send</button>
         </form>
       </div>
     </div>

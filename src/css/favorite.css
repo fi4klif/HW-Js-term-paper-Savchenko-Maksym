@@ -1,0 +1,374 @@
+:root {
+  --font-family: 'DM Sans', sans-serif;
+  --color-black: #242424;
+  --color-white: #F4F4F4;
+  --color-white-pure: #FFFFFF;
+}
+
+/* =========================================== */
+/* MOBILE  (< 768px)                      */
+/* =========================================== */
+
+.fav-section {
+  padding-top: 40px;
+  padding-bottom: 40px; 
+}
+
+.fav-section-title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.fav-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.fav-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fav-quote-card {
+  background: var(--color-black);
+  border-radius: 20px;
+  padding: 20px;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 164px;
+}
+
+.fav-quote-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.fav-icon-wrap {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fav-quote-label {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--color-white-pure);
+}
+
+.fav-commas-wrap {
+  margin-left: auto;
+}
+
+.fav-quote-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(244, 244, 244, 0.6);
+  margin-bottom: 16px;
+}
+
+.fav-quote-author {
+  margin-left: 37px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #F4F4F4;
+}
+
+.fav-bottom-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Info Card */
+.fav-info-card {
+  background: var(--color-white-pure);
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  height: 141px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fav-info-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.fav-info-icon {
+  width: 32px;
+  height: 32px;
+  background: #242424;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fav-info-icon img {
+    filter: invert(1); 
+    width: 20px; 
+    height: 20px;
+}
+
+.fav-info-title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-black);
+}
+
+.fav-info-subtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(36, 36, 36, 0.6);
+}
+
+.fav-image-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* Fix Mobile: height auto to show full image */
+  height: auto; 
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #FFFFFF; 
+  position: relative;
+}
+
+.fav-img-cover {
+  width: 100%;
+  /* Fix Mobile: height auto to maintain aspect ratio */
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.fav-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.favorites-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.favorites-empty {
+  text-align: center;
+  max-width: 554px;
+  margin: 0 auto;
+}
+
+.favorites-empty-text {
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-black);
+}
+
+.exercise-remove-btn {
+  margin-left: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exercise-remove-btn svg {
+  stroke: var(--color-black);
+  width: 16px; 
+  height: 16px;
+  transition: stroke 0.3s;
+}
+.exercise-remove-btn:hover svg {
+  stroke: #E9003F; 
+}
+
+/* =========================================== */
+/* TABLET (min-width: 768px)                   */
+/* =========================================== */
+@media screen and (min-width: 768px) {
+  .fav-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+
+  .fav-section-title {
+    font-size: 44px;
+    line-height: 48px;
+    margin-bottom: 32px;
+  }
+
+  .fav-left-col {
+    gap: 32px;
+  }
+
+  .fav-quote-card {
+    width: 100%; 
+    height: 220px; 
+    padding: 40px; 
+  }
+  
+  .fav-quote-text {
+    font-size: 14px;
+    margin-bottom: auto;
+  }
+
+  .fav-bottom-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .fav-info-card {
+    width: 344px; 
+    height: 141px;
+    flex-shrink: 0;
+  }
+
+  .fav-image-card {
+    background-image: url('../img/main/fav-tablet.png');
+    max-width: none;
+    height: 141px;
+    object-fit: center;
+    object-position: center;
+    background-position: 50% 30%; 
+  }
+  
+  .fav-img-cover {
+    display: none;
+  }
+
+  .favorites-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 32px;
+  }
+}
+
+/* =========================================== */
+/* DESKTOP (min-width: 1440px)                 */
+/* =========================================== */
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .fav-section {
+    padding-top: 80px;
+  }
+
+  .fav-wrapper {
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+  }
+  
+  .fav-left-col {
+    width: 494px;
+    flex-shrink: 0;
+  }
+
+  .fav-quote-card {
+    width: 494px;
+    height: 230px;
+  }
+
+  .fav-info-card {
+    width: 239px;
+    height: 141px;
+  }
+
+  .fav-image-card {
+    background-image: url(../img/main/fav-desktop.png);
+    width: 239px;
+    height: 141px;
+    background-position: center;
+  }
+
+  .fav-right-col {
+    flex-grow: 1;
+    padding-top: 0; 
+  }
+
+  .favorites-empty {
+    width: 554px;
+    max-width: 100%;
+    margin: 180px auto 0;
+  }
+  
+  /* Hides pagination only inside right column on Desktop */
+  .fav-right-col .pagination {
+    display: none;
+  }
+
+  /* ------------------------------------------- */
+  /* SCROLLBAR & LIST STYLES (DESKTOP ONLY)      */
+  /* ------------------------------------------- */
+  
+  .favorites-list {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 16px;
+    height: auto;
+    max-height: 487px; 
+    
+    overflow-y: auto;
+    padding-right: 8px; 
+  }
+
+  .favorites-list::-webkit-scrollbar {
+    width: 8px; 
+  }
+
+  .favorites-list::-webkit-scrollbar-track {
+    background: rgba(36, 36, 36, 0.1);
+    border-radius: 12px;
+  }
+
+  .favorites-list::-webkit-scrollbar-thumb {
+    background: #242424;
+    border-radius: 12px;
+  }
+  
+  .favorites-list {
+    scrollbar-width: thin;
+    scrollbar-color: #242424 rgba(36, 36, 36, 0.1);
+  }
+}

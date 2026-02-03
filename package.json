@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open /index.html",
     "build": "vite build --base=/HW-Js-term-paper-Savchenko-Maksym/",
     "preview": "vite preview"
   },
@@ -17,6 +17,7 @@
   "author": "Maksym Savchenko",
   "license": "ISC",
   "dependencies": {
+    "izitoast": "^1.4.0",
     "modern-normalize": "^3.0.1",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
