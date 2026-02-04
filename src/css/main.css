@@ -1,7 +1,7 @@
 :root {
   --font-family: 'DM Sans', sans-serif;
   --color-black: #242424;
-  --color-dark-gray: rgba(36, 36, 36, 0.6);
+  --color-dark-gray: rgba(36, 36, 36, 0.8);
   --color-white: #f4f4f4;
   --color-white-pure: #ffffff;
   --bg-color: #f4f4f4;
@@ -151,6 +151,13 @@ img {
 .tag:hover {
   background-color: var(--color-black);
   color: var(--color-white-pure);
+}
+
+.hero picture {
+  order: 2;
+  width: 100%;
+  display: flex;
+  justify-content:center ;
 }
 
 .hero-image {
