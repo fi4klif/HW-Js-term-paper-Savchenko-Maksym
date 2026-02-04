@@ -88,6 +88,7 @@ img {
 }
 
 .hero-icon {
+  order: 1;
   width: 38px; 
   height: 38px;
   display: inline-block;
